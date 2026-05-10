@@ -120,8 +120,8 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(to right, rgba(10,10,10,0.85) 40%, rgba(10,10,10,0.3) 100%),
-      linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+      linear-gradient(to right, rgba(10,10,10,0.92) 35%, rgba(10,10,10,0.5) 65%, rgba(10,10,10,0.25) 100%),
+      linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent 80%);
     z-index: 1;
   }
 
@@ -884,6 +884,17 @@
 
   .footer-legal a:hover { color: var(--gold); }
 
+  .car-visual img { display: block; }
+
+  .philosophy-img-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -919,16 +930,15 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-visual">
-    <!-- Atmospheric dark background with subtle gradient -->
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%, #1a1a1a 0%, #0a0a0a 60%)"></div>
-    <!-- Decorative lines -->
-    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" viewBox="0 0 1400 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Real hero car photo - Lamborghini Huracan EVO -->
+    <img src="https://images.unsplash.com/photo-1566473965997-3de9c817e938?auto=format&fit=crop&w=1920&q=80" alt="Lamborghini Huracan EVO" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"/>
+    <!-- Decorative lines overlay -->
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.03" viewBox="0 0 1400 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="0" y1="900" x2="1400" y2="0" stroke="#C9A84C" stroke-width="1"/>
       <line x1="200" y1="900" x2="1400" y2="100" stroke="#C9A84C" stroke-width="1"/>
       <line x1="0" y1="700" x2="1200" y2="0" stroke="#C9A84C" stroke-width="1"/>
     </svg>
-    <!-- Hero car SVG illustration -->
-    <svg class="hero-car-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- SVG removed - replaced by real photo --><svg style="display:none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#3a3a3a"/>
@@ -1121,51 +1131,7 @@
     <!-- Featured large card -->
     <div class="car-card">
       <div class="car-visual">
-        <!-- Lamborghini Huracán style SVG -->
-        <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lam1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#E8A020"/>
-              <stop offset="100%" stop-color="#B87010"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="350" cy="278" rx="300" ry="14" fill="rgba(0,0,0,0.5)"/>
-          <!-- Very low body -->
-          <path d="M 70 230 Q 80 215 130 200 Q 180 180 280 170 Q 380 155 430 155 Q 500 155 560 175 Q 610 195 630 215 L 635 250 L 65 250 Z" fill="url(#lam1)"/>
-          <!-- Roof / greenhouse -->
-          <path d="M 220 170 Q 260 130 320 118 L 460 118 Q 510 125 540 170 Z" fill="#B87010"/>
-          <!-- Windshield -->
-          <path d="M 228 170 Q 266 135 324 120 L 454 120 Q 500 130 532 170 Z" fill="rgba(100,140,180,0.18)" stroke="rgba(255,200,80,0.3)" stroke-width="0.8"/>
-          <!-- Side vents (angular Lambo style) -->
-          <path d="M 590 200 L 630 210 L 632 225 L 590 218 Z" fill="rgba(0,0,0,0.6)"/>
-          <path d="M 565 195 L 585 200 L 585 212 L 565 208 Z" fill="rgba(0,0,0,0.5)"/>
-          <!-- Front splitter -->
-          <path d="M 60 245 L 80 238 L 80 255 L 60 255 Z" fill="#8B5E0A"/>
-          <path d="M 62 248 L 78 242 L 78 252 L 62 252 Z" fill="rgba(232,160,32,0.3)"/>
-          <!-- Wheels -->
-          <circle cx="170" cy="255" r="32" fill="#111" stroke="#333" stroke-width="1.5"/>
-          <circle cx="170" cy="255" r="25" fill="#1a1a1a"/>
-          <circle cx="170" cy="255" r="6" fill="#555"/>
-          <g stroke="#E8A020" stroke-width="1.2" opacity="0.7">
-            <line x1="170" y1="230" x2="170" y2="237"/>
-            <line x1="170" y1="273" x2="170" y2="280"/>
-            <line x1="145" y1="255" x2="152" y2="255"/>
-            <line x1="188" y1="255" x2="195" y2="255"/>
-          </g>
-          <circle cx="540" cy="255" r="32" fill="#111" stroke="#333" stroke-width="1.5"/>
-          <circle cx="540" cy="255" r="25" fill="#1a1a1a"/>
-          <circle cx="540" cy="255" r="6" fill="#555"/>
-          <g stroke="#E8A020" stroke-width="1.2" opacity="0.7">
-            <line x1="540" y1="230" x2="540" y2="237"/>
-            <line x1="540" y1="273" x2="540" y2="280"/>
-            <line x1="515" y1="255" x2="522" y2="255"/>
-            <line x1="558" y1="255" x2="565" y2="255"/>
-          </g>
-          <!-- Headlight -->
-          <path d="M 67 215 L 120 208 L 125 225 L 68 230 Z" fill="#1a1a1a"/>
-          <path d="M 70 217 L 118 211 L 122 223 L 71 227 Z" fill="rgba(255,220,100,0.3)"/>
-          <line x1="72" y1="220" x2="120" y2="214" stroke="#FFE060" stroke-width="1.5" opacity="0.9"/>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1566473965997-3de9c817e938?auto=format&fit=crop&w=800&q=80" alt="Lamborghini Huracan EVO" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
         <div class="car-overlay"></div>
         <div class="car-badge">New Arrival</div>
       </div>
@@ -1187,46 +1153,7 @@
     <!-- Card 2 -->
     <div class="car-card">
       <div class="car-visual">
-        <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="por1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#2a2a2a"/>
-              <stop offset="100%" stop-color="#111"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="250" cy="238" rx="220" ry="11" fill="rgba(0,0,0,0.5)"/>
-          <!-- Porsche 911 silhouette -->
-          <path d="M 50 200 Q 60 185 100 175 Q 150 162 220 155 Q 290 148 340 150 Q 400 155 430 175 Q 450 188 455 205 L 455 220 L 45 220 Z" fill="url(#por1)"/>
-          <path d="M 160 155 Q 185 115 230 105 L 320 105 Q 360 112 380 155 Z" fill="#1a1a1a"/>
-          <path d="M 165 155 Q 188 118 232 108 L 318 108 Q 355 115 375 155 Z" fill="rgba(80,110,140,0.18)" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-          <!-- Round headlights (911 style) -->
-          <circle cx="72" cy="190" r="14" fill="#1a1a1a" stroke="#C9A84C" stroke-width="0.8"/>
-          <circle cx="72" cy="190" r="10" fill="rgba(232,201,111,0.2)"/>
-          <circle cx="91" cy="186" r="8" fill="#1a1a1a" stroke="#C9A84C" stroke-width="0.8"/>
-          <circle cx="91" cy="186" r="5" fill="rgba(232,201,111,0.15)"/>
-          <!-- Air intakes rear -->
-          <rect x="398" y="185" width="20" height="8" rx="1" fill="rgba(0,0,0,0.7)"/>
-          <rect x="398" y="197" width="20" height="5" rx="1" fill="rgba(0,0,0,0.7)"/>
-          <!-- Wheels -->
-          <circle cx="130" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="130" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="130" cy="222" r="5" fill="#444"/>
-          <g stroke="#C9A84C" stroke-width="1" opacity="0.6">
-            <line x1="130" y1="201" x2="130" y2="208"/>
-            <line x1="130" y1="236" x2="130" y2="243"/>
-            <line x1="109" y1="222" x2="116" y2="222"/>
-            <line x1="144" y1="222" x2="151" y2="222"/>
-          </g>
-          <circle cx="370" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="370" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="370" cy="222" r="5" fill="#444"/>
-          <g stroke="#C9A84C" stroke-width="1" opacity="0.6">
-            <line x1="370" y1="201" x2="370" y2="208"/>
-            <line x1="370" y1="236" x2="370" y2="243"/>
-            <line x1="349" y1="222" x2="356" y2="222"/>
-            <line x1="384" y1="222" x2="391" y2="222"/>
-          </g>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Porsche 911 Turbo S" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
         <div class="car-overlay"></div>
       </div>
       <div class="car-info">
@@ -1247,46 +1174,7 @@
     <!-- Card 3 -->
     <div class="car-card">
       <div class="car-visual">
-        <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="fer1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#8B0000"/>
-              <stop offset="100%" stop-color="#4a0000"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="250" cy="238" rx="215" ry="10" fill="rgba(0,0,0,0.5)"/>
-          <!-- Ferrari Roma style -->
-          <path d="M 55 205 Q 70 185 120 172 Q 180 158 250 152 Q 320 148 380 165 Q 425 180 445 205 L 448 222 L 52 222 Z" fill="url(#fer1)"/>
-          <path d="M 185 153 Q 215 118 258 110 L 320 110 Q 360 118 390 153 Z" fill="#6a0000"/>
-          <path d="M 190 153 Q 218 120 261 113 L 318 113 Q 355 122 385 153 Z" fill="rgba(80,100,140,0.15)" stroke="rgba(201,168,76,0.25)" stroke-width="0.8"/>
-          <!-- Ferrari long slim headlight -->
-          <path d="M 58 198 Q 75 190 115 188 L 118 200 Q 80 205 58 210 Z" fill="#1a1a1a"/>
-          <path d="M 61 200 Q 76 193 112 191 L 114 199 Q 82 202 62 207 Z" fill="rgba(255,240,180,0.2)"/>
-          <line x1="63" y1="202" x2="112" y2="193" stroke="#FFE080" stroke-width="1.2" opacity="0.8"/>
-          <!-- Prancing horse badge area -->
-          <rect x="238" y="165" width="24" height="16" rx="2" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" stroke-width="0.5"/>
-          <!-- Rear -->
-          <path d="M 418 195 L 446 205 L 445 220 L 416 215 Z" fill="#5a0000"/>
-          <!-- Wheels -->
-          <circle cx="140" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="140" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="140" cy="222" r="5" fill="#444"/>
-          <g stroke="#8B0000" stroke-width="1" opacity="0.8">
-            <line x1="140" y1="201" x2="140" y2="208"/>
-            <line x1="140" y1="236" x2="140" y2="243"/>
-            <line x1="119" y1="222" x2="126" y2="222"/>
-            <line x1="154" y1="222" x2="161" y2="222"/>
-          </g>
-          <circle cx="370" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="370" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="370" cy="222" r="5" fill="#444"/>
-          <g stroke="#8B0000" stroke-width="1" opacity="0.8">
-            <line x1="370" y1="201" x2="370" y2="208"/>
-            <line x1="370" y1="236" x2="370" y2="243"/>
-            <line x1="349" y1="222" x2="356" y2="222"/>
-            <line x1="384" y1="222" x2="391" y2="222"/>
-          </g>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=800&q=80" alt="Ferrari Roma Spider" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
         <div class="car-overlay"></div>
         <div class="car-badge">Certified</div>
       </div>
@@ -1308,43 +1196,7 @@
     <!-- Card 4 -->
     <div class="car-card">
       <div class="car-visual">
-        <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="ast1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#1a3a1a"/>
-              <stop offset="100%" stop-color="#0a1a0a"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="250" cy="238" rx="215" ry="10" fill="rgba(0,0,0,0.5)"/>
-          <!-- Aston Martin DB12 -->
-          <path d="M 52 208 Q 65 188 115 175 Q 170 162 250 157 Q 330 152 385 170 Q 425 185 445 208 L 448 222 L 48 222 Z" fill="url(#ast1)"/>
-          <path d="M 180 157 Q 212 120 255 112 L 312 112 Q 352 118 378 157 Z" fill="#0a2a0a"/>
-          <path d="M 185 157 Q 215 124 258 115 L 310 115 Q 348 122 373 157 Z" fill="rgba(80,120,100,0.18)" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-          <!-- Aston grille shape -->
-          <path d="M 55 200 Q 65 192 95 188 L 98 205 Q 70 210 55 215 Z" fill="#111"/>
-          <path d="M 60 203 Q 68 196 90 193 L 93 204 Q 73 207 62 211 Z" fill="rgba(201,168,76,0.15)"/>
-          <!-- Vane headlights -->
-          <line x1="63" y1="200" x2="92" y2="193" stroke="#E8C96F" stroke-width="1.2" opacity="0.8"/>
-          <!-- Wheels -->
-          <circle cx="138" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="138" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="138" cy="222" r="5" fill="#3a4a3a"/>
-          <g stroke="#4a8a4a" stroke-width="1" opacity="0.7">
-            <line x1="138" y1="201" x2="138" y2="208"/>
-            <line x1="138" y1="236" x2="138" y2="243"/>
-            <line x1="117" y1="222" x2="124" y2="222"/>
-            <line x1="152" y1="222" x2="159" y2="222"/>
-          </g>
-          <circle cx="370" cy="222" r="28" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
-          <circle cx="370" cy="222" r="21" fill="#1a1a1a"/>
-          <circle cx="370" cy="222" r="5" fill="#3a4a3a"/>
-          <g stroke="#4a8a4a" stroke-width="1" opacity="0.7">
-            <line x1="370" y1="201" x2="370" y2="208"/>
-            <line x1="370" y1="236" x2="370" y2="243"/>
-            <line x1="349" y1="222" x2="356" y2="222"/>
-            <line x1="384" y1="222" x2="391" y2="222"/>
-          </g>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Aston Martin DB12" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
         <div class="car-overlay"></div>
       </div>
       <div class="car-info">
@@ -1372,52 +1224,7 @@
 <section class="philosophy-section" id="about">
   <div class="philosophy-visual">
     <div class="philosophy-img-frame">
-      <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style="width:85%">
-        <!-- Interior / steering wheel scene -->
-        <defs>
-          <radialGradient id="intGrad" cx="50%" cy="40%" r="60%">
-            <stop offset="0%" stop-color="#2a2a2a"/>
-            <stop offset="100%" stop-color="#0d0d0d"/>
-          </radialGradient>
-        </defs>
-        <rect width="400" height="520" fill="url(#intGrad)"/>
-        <!-- Dashboard -->
-        <path d="M 0 300 Q 200 250 400 300 L 400 520 L 0 520 Z" fill="#111"/>
-        <path d="M 0 310 Q 200 262 400 310" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-        <!-- Steering wheel -->
-        <circle cx="200" cy="400" r="90" fill="none" stroke="#2a2a2a" stroke-width="16"/>
-        <circle cx="200" cy="400" r="90" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
-        <!-- Spokes -->
-        <line x1="200" y1="310" x2="200" y2="350" stroke="#1a1a1a" stroke-width="18"/>
-        <line x1="200" y1="310" x2="200" y2="350" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-        <line x1="124" y1="462" x2="152" y2="435" stroke="#1a1a1a" stroke-width="18"/>
-        <line x1="124" y1="462" x2="152" y2="435" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-        <line x1="276" y1="462" x2="248" y2="435" stroke="#1a1a1a" stroke-width="18"/>
-        <line x1="276" y1="462" x2="248" y2="435" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-        <!-- Center hub -->
-        <circle cx="200" cy="400" r="30" fill="#1a1a1a"/>
-        <circle cx="200" cy="400" r="20" fill="#111"/>
-        <!-- APEX badge -->
-        <rect x="185" y="392" width="30" height="16" rx="2" fill="#C9A84C" opacity="0.8"/>
-        <text x="200" y="403" font-family="'Barlow Condensed'" font-size="7" fill="#000" text-anchor="middle" letter-spacing="1" font-weight="700">APEX</text>
-        <!-- Gauge cluster -->
-        <circle cx="120" cy="290" r="35" fill="none" stroke="#333" stroke-width="1"/>
-        <circle cx="120" cy="290" r="25" fill="none" stroke="#222" stroke-width="8"/>
-        <text x="120" y="295" font-family="'Cormorant Garamond', serif" font-size="14" fill="#C9A84C" text-anchor="middle">RPM</text>
-        <!-- Needle -->
-        <line x1="120" y1="290" x2="138" y2="270" stroke="#C9A84C" stroke-width="1.5"/>
-
-        <circle cx="280" cy="290" r="35" fill="none" stroke="#333" stroke-width="1"/>
-        <circle cx="280" cy="290" r="25" fill="none" stroke="#222" stroke-width="8"/>
-        <text x="280" y="295" font-family="'Cormorant Garamond', serif" font-size="12" fill="#C9A84C" text-anchor="middle">MPH</text>
-        <line x1="280" y1="290" x2="298" y2="272" stroke="#C9A84C" stroke-width="1.5"/>
-
-        <!-- Center console display -->
-        <rect x="155" y="272" width="90" height="55" rx="4" fill="#0a0a0a" stroke="#333" stroke-width="0.5"/>
-        <text x="200" y="292" font-family="'Cormorant Garamond', serif" font-size="9" fill="#C9A84C" text-anchor="middle" opacity="0.6">SPORT+</text>
-        <text x="200" y="310" font-family="'Cormorant Garamond', serif" font-size="18" fill="#E8C96F" text-anchor="middle">128</text>
-        <text x="200" y="323" font-family="'Barlow Condensed'" font-size="6" fill="#888" text-anchor="middle" letter-spacing="2">KM/H</text>
-      </svg>
+      <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=600&q=80" alt="Luxury car interior" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
       <div class="philosophy-number">37</div>
     </div>
     <div class="philosophy-accent"></div>
